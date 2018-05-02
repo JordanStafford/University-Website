@@ -1,3 +1,31 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+
+require_once "config.php";
+
+$sql = "SELECT * FROM users WHERE userName = '". $_POST['userName'] ."' AND userPassword = '". $_POST['userPassword'] ."'";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  header("Location: welcome_get.php");
+} else {
+  echo 'nay';
+};
+//   $query = $conn->prepare($sql);
+//   $query->bind_param('ss', $_POST["userName"], $_POST["userPassword"]);
+//
+//   $result = $query->query();
+//   echo $result;
+//
+//    if ($result == 1) {
+// } else {
+//    echo "Not allowed: " . $conn->error;
+// }
+}
+?>
+
+
 <html>
 <head>
   <title>Hot Drinks And Snack Ltd</title>
@@ -39,8 +67,6 @@
   <div class="header">
     <h1>Hot Drinks And Snack Ltd</h1>
     <p style="text-align:center">
-      Providing the best drink machines on the market
-    </p>
 
   <ul>
     <li><a class="active" href="index.html">Home</a></li>
@@ -48,14 +74,13 @@
     <li><a href="admin_page.php">Admin</a></li>
   </ul>
 
-
-
-
-  <h1 style="text-align:left">Welcome to the admin section. <br /> Please use your staff login details to make changes</h1>
-  <form style="color:black;" style="font-family:Raleway;" action="welcome_get.php" method="get">
-    UserName: <input type="text" name="userName"><br>
-    Password: <input type="text" name="userPassword"><br>
-<input type="submit">
+  <form method = "post">
+  <label>userName  :</label><input type = "text" name = "userName" class = "box"/><br /><br />
+  <label>userPassword  :</label><input type = "password" name = "userPassword" class = "box" /><br/><br />
+  <input type = "submit" value = " Submit "/><br />
   </form>
+
+
+
 </body>
 </html>

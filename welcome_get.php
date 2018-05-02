@@ -1,3 +1,4 @@
+
 <html>
 
 
@@ -118,8 +119,11 @@ function updater($data,$id) {
    }
 }
 
+
+
 $conn->close();
 ?>
+
 <form style="color:black;" style="font-family:Raleway;" method="post">
   ID: <input type="text" name="id"><br>
   Pressure: <input type="text" name="pressure"><br>
