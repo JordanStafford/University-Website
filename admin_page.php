@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
@@ -8,9 +11,11 @@ $sql = "SELECT * FROM users WHERE userName = '". $_POST['userName'] ."' AND user
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
+  $_SESSION["userName"]= $_POST['userName'];
+  $_SESSION["userPassword"]= $_POST['userPassword'];
   header("Location: welcome_get.php");
 } else {
-  echo 'nay';
+  echo 'User Not Found Please Try Again.';
 };
 //   $query = $conn->prepare($sql);
 //   $query->bind_param('ss', $_POST["userName"], $_POST["userPassword"]);
@@ -79,6 +84,7 @@ if ($result->num_rows > 0) {
   <label>userPassword  :</label><input type = "password" name = "userPassword" class = "box" /><br/><br />
   <input type = "submit" value = " Submit "/><br />
   </form>
+
 
 
 

@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <html>
 
 
@@ -70,8 +72,15 @@
     <li><a href="products.php">Products</a></li>
     <li><a href="admin_page.php">Admin</a></li>
   </ul>
-  Welcome <?php echo $_GET["name"]; ?><br>
-Your email address is: <?php echo $_GET["email"]; ?>
+  <?
+  ?>
+  <?php
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
+  echo "Your name is " . $_SESSION["userName"] . ".<br/>";
+  echo "Your user name is " . $_SESSION["userName"] . ".<br />";
+  ?>
 <p style="text-align: left;">
   This is the current catalogue
 </p>
@@ -140,8 +149,9 @@ $conn->close();
 <br />
 <a href="add.php" class="button">Add A  New Item</a> <br />
 </br>
-<a href="view_orders.php" class="button">View Customers Reservations</a>
-
+<a href="view_orders.php" class="button">View Customers Reservations</a> <br />
+<br />
+<a href="logout.php" class="button">Logout</a>
 </body>
 
 </html>
