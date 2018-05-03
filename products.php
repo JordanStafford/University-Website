@@ -4,55 +4,7 @@
   <link rel="stylesheet" href="products_style.css" />
   <link href='https://fonts.googleapis.com/css?family=Raleway' />
   <style>
-  .button {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    background-color: #2E8B57;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    color: white;
-  }
-  .button:hover {background-color: #3CB371}
 
-  .button:active{
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  body {
-    font-size: 16px;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #666666;
-    position: -webkit-sticky; /*safari*/
-    position: sticky;
-    top: 0;
-  }
-  li {
-    float: left;
-  }
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  li a:hover {
-    background-color: #2E8B57;
-  }
-  .active {
-    background-color: #2E8B57;
-  }
   </style>
 </head>
 <body>
