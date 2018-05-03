@@ -65,7 +65,7 @@
     padding: 0 16px;
   }
   .container {
-    background-color: #f2f2f2;
+    background-color: #D3D3D3;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;
@@ -80,7 +80,7 @@
     font-size: 24px;
   }
   .btn {
-    background-color: #4CAF50;
+    background-color: #2E8B57;
     color: white;
     padding: 12px;
     margin: 10px 0;
@@ -91,7 +91,7 @@
     font-size: 17px;
   }
   .btn:hover {
-    background-color: #45a049;
+    background-color: #2E8B57;
   }
   a {
     color: #2196F3;
@@ -103,6 +103,8 @@
     float: right;
     color: grey;
   }
+
+
   </style>
 </head>
 <body>
@@ -195,6 +197,73 @@ require_once 'config.php';
     Quantity: <input type="int" name="quantity"><br>
     <input type="submit"> <br />
   <br />
+
+  <h2>Please Enter Your Card Details</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="order_number.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address & Shipping Address</h3>
+            <label for="fullname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fullname" name="firstname">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" <br />
+            <label for="address"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address">
+            <label for="city"><i class="fa fa-building" style="font-size:24px"></i>City</label>
+            <input type="text" id="city" name="city">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="County">County</label>
+                <input type="text" id="County" name="County"> <br />
+              </div>
+              <div class="col-50">
+                <label for="Post Code">Post Code</label>
+                <input type="text" id="zip" name="zip">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Payment Types</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:green;"></i>
+              <i class="fa fa-cc-stripe" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-bitcoin" style="font-size:26px;color:orange"></i>
+            </div>
+            <label for="nameoncard">Cardholders Name</label>
+            <input type="text" id="nameoncard" name="nameoncard">
+            <label for="cardnum">Card Number</label>
+            <input type="text" id="cardnum" name="cardnumber">
+            <label for="expiarymonth">Expiary Month</label>
+            <input type="text" id="expiarymonth" name="expiarymonth">
+            <div class="row">
+              <div class="col-50">
+                <label for="expiaryyear">Expiary Year</label>
+                <input type="text" id="expiaryyear" name="expiaryyear">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <a href="order_number.php" class="btn">Continue</a>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 
