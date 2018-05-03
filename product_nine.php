@@ -28,11 +28,11 @@
    $sql = "SELECT * FROM machines LIMIT 1 OFFSET 8";
    $result = $conn->query($sql);
    if ($result->num_rows > 0) {
-     echo "<table><tr><th>ID</th><th>pressure</th><th>PowerOutput</th><th>WaterCapacity</th><th>price</th><th>Name</th><th>Description</th><th>Stock</th></tr>";
+     echo "<table><tr><th>Name</th><th>Pressure</th><th>Power Output</th><th>Water Capacity</th><th>Price</th><th>Description</th><th>Stock</th></tr>";
 
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "<tr><td>".$row["id"]."</td><td>".$row["pressure"]. "</td><td>".$row["powerOutput"]. "</td><td>".$row["waterCapacity"]. "</td><td>".$row["price"]."</td><td>".$row["name"]. "</td><td>".$row["description"]."</td><td>".$row["stock"]. "</td></tr>";
+      echo "<tr><td>".$row["name"]."</td><td>".$row["pressure"]. "</td><td>".$row["powerOutput"]. "</td><td>".$row["waterCapacity"]. "</td><td>".$row["price"]."</td></td><td>".$row["description"]."</td><td>".$row["stock"]. "</td></tr>";
     }
     echo "</table>";
   } else {
