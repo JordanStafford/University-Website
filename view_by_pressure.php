@@ -28,11 +28,11 @@
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-    echo "<table><tr><th>ID</th><th>pressure</th></tr>";
+    echo "<table><tr><th>Name</th><th>pressure</th></tr>";
 
    // output data of each row
    while($row = $result->fetch_assoc()) {
-     echo "<tr><td>".$row["id"]."</td><td>".$row["pressure"]. "</td></tr>";
+     echo "<tr><td>".$row["name"]."</td><td>".$row["pressure"]. "</td></tr>";
    }
    echo "</table>";
  } else {
