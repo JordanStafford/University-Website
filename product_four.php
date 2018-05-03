@@ -6,9 +6,6 @@
   <link rel="stylesheet" href="p_four.css" />
   <link href='https://fonts.googleapis.com/css?family=Raleway' />
   <style>
-  body {
-    font-size: 16px;
-  }
   ul {
     list-style-type: none;
     margin: 0;
