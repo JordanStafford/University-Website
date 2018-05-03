@@ -1,5 +1,6 @@
 body {
   background-image: url("./images/ravenna.png");
+  font-size: 16px;
 }
 
 h1 {
@@ -12,4 +13,28 @@ p {
   text-align: center;
   font-family: Raleway;
   color: black;
+}
+.active {
+  background-color: #2E8B57;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: #fff;
+  background-color: #2E8B57;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  color: white;
+}
+.button:hover {background-color: #3CB371}
+
+.button:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
