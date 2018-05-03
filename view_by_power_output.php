@@ -4,36 +4,6 @@
   <link rel="stylesheet" href="power.css" />
   <link href='https://fonts.googleapis.com/css?family=Raleway' />
   <style>
-  body {
-    font-size: 16px;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #666666;
-    position: -webkit-sticky; /*safari*/
-    position: sticky;
-    top: 0;
-  }
-  li {
-    float: left;
-  }
-  li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: white;
-  }
-  li a:hover {
-    background-color: #2E8B57;
-  }
-  .active {
-    background-color: #2E8B57;
-  }
   </style>
 </head>
 <body>
